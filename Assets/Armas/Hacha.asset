@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ArmaSO
   alcance: 2
   "da\xF1o": 40
-  cadencia: 4
+  cadencia: 2.5

@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class ControlJugador : MonoBehaviour
@@ -17,7 +16,13 @@ public class ControlJugador : MonoBehaviour
     [SerializeField] private ArmaSO primaria;
     [SerializeField] private ArmaSO secundaria;
 
-    public bool puedePegar;
+    public bool puedePegar = true;
+    [SerializeField] private int daño;
+
+    private void Start()
+    {
+        daño = actual.daño;
+    }
 
     void Update()
     {
@@ -37,6 +42,8 @@ public class ControlJugador : MonoBehaviour
             {
                 actual = primaria;
             }
+            daño = actual.daño;
+            distanciaAtaque = actual.alcance;
         }
     }
 
@@ -69,7 +76,7 @@ public class ControlJugador : MonoBehaviour
     private void Golpear()
     {
         //Golpe
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && puedePegar)
         {
             Ray golpe = new Ray(transform.position, transform.forward);
             RaycastHit enemyInfo;

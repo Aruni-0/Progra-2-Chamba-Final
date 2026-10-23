@@ -291,7 +291,8 @@ MonoBehaviour:
   actual: {fileID: 11400000, guid: cd309d4b0ce5b71439383da58088ec42, type: 2}
   primaria: {fileID: 11400000, guid: cd309d4b0ce5b71439383da58088ec42, type: 2}
   secundaria: {fileID: 11400000, guid: 61b926656cadb404cb4025d9a8fe1e38, type: 2}
-  puedePegar: 0
+  puedePegar: 1
+  "da\xF1o": 0
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
