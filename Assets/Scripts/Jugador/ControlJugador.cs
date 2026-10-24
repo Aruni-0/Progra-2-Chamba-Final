@@ -86,6 +86,11 @@ public class ControlJugador : MonoBehaviour
             if (Physics.Raycast(golpe.origin, golpe.direction, out enemyInfo, distanciaAtaque, layerMask))
             {
                 Debug.Log(enemyInfo.transform.gameObject.name);
+                if (enemyInfo.collider.TryGetComponent<Enemigos>(out Enemigos componente))
+                {
+                    componente.RecibirDaño(daño);
+                }
+                //TryGetComponent<Enemigos>(out Enemigos componente);
             }
             else
             {
