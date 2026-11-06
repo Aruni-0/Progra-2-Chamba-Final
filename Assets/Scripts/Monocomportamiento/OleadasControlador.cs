@@ -58,8 +58,8 @@ public class OleadasControlador : MonoBehaviour
             int enteroAux = Random.Range(0, 2);//Este elige al azar el tipo de enemigo
             int enteroAux2 = Random.Range(0, 4);//Este elige al azar el punto de Spawn
             GameObject clone = Instantiate(datos[enteroAux].objeto, spawners[enteroAux2].position, spawners[enteroAux2].rotation);
-            clone.GetComponent<Enemigos>().datos = datos[enteroAux];
-            clone.GetComponent<Enemigos>().objetivo = jugador;
+            clone.GetComponent<EnemigosOLD>().datos = datos[enteroAux];
+            clone.GetComponent<EnemigosOLD>().objetivo = jugador;
         }
     }
 
@@ -72,8 +72,8 @@ public class OleadasControlador : MonoBehaviour
             {
                 int auxilia = Random.Range(0, 4);
                 GameObject clone = Instantiate(enem.objeto, spawners[auxilia].position, spawners[auxilia].rotation);
-                clone.GetComponent<Enemigos>().datos = enem;
-                clone.GetComponent<Enemigos>().objetivo = jugador;
+                clone.GetComponent<EnemigosOLD>().datos = enem;
+                clone.GetComponent<EnemigosOLD>().objetivo = jugador;
                 yield return new WaitForSeconds(2);
             }
             yield return new WaitForSeconds(30);

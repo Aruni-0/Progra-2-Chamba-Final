@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Enemigos : MonoBehaviour, IDañables
+public class EnemigosOLD : MonoBehaviour, IDañables
 {
     public int vida;
     public EnemigosSO datos;
