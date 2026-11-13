@@ -12,9 +12,9 @@ public class ControlJugador : MonoBehaviour
     [SerializeField] private LayerMask layerMask;
 
     [Header("Armas Info")]
-    [SerializeField] private ArmaSO actual;
-    [SerializeField] private ArmaSO primaria;
-    [SerializeField] private ArmaSO secundaria;
+    [SerializeField] public ArmaSO actual;
+    [SerializeField] public ArmaSO primaria;
+    [SerializeField] public ArmaSO secundaria;
 
     public bool puedePegar = true;
     [SerializeField] private int daño;
@@ -31,7 +31,11 @@ public class ControlJugador : MonoBehaviour
         MovimientoRaton();
         Golpear();
         Interaccion();
+        CambiarArma();
+    }
 
+    private void CambiarArma()
+    {
         if (Input.GetKeyDown(KeyCode.Tab))
         {
             if (actual == primaria)
