@@ -99,10 +99,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5386091891358334292}
-  - component: {fileID: 3840095693581492225}
   - component: {fileID: 3752230299935026840}
   - component: {fileID: 4371210216729307572}
   - component: {fileID: 8401227791717834295}
+  - component: {fileID: 8041962475493472058}
   m_Layer: 3
   m_Name: Enemigo
   m_TagString: Enemigo
@@ -126,21 +126,6 @@ Transform:
   - {fileID: 7873623811983775729}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3840095693581492225
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4128267459327243002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5dd9d2c0f55c6b44186a201d8975113a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Enemigos
-  vida: 0
-  datos: {fileID: 11400000, guid: 5e07d845bb3a8554b924280939ac599e, type: 2}
-  objetivo: {fileID: 0}
 --- !u!65 &3752230299935026840
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -211,6 +196,26 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &8041962475493472058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4128267459327243002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72d1c82708f6e5f44b70431c958555f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemigoAvanzado
+  agente: {fileID: 0}
+  rangoMovimientoRandom: 5
+  radioDeteccion: 0
+  capaJugador:
+    serializedVersion: 2
+    m_Bits: 0
+  jugador: {fileID: 0}
+  rangoAtaque: 0
 --- !u!1 &7983685804588838367
 GameObject:
   m_ObjectHideFlags: 0

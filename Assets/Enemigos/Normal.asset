@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6a758c9839d89a4e890717444ab3b70, type: 3}
   m_Name: Normal
   m_EditorClassIdentifier: Assembly-CSharp::EnemigosSO
+  nombre: Normal
   vida: 50
   velocidad: 5
   "da\xF1o": 10
